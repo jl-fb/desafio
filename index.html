@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/index.css">
+<script src="./dist/main.js"></script>
+
+<head>
+    <meta charset=" UTF-8">
+
+    <title>Document</title>
+
+<body>
+    <header class="jumbotron col-12 col-sm-10 mt-3">
+        <h1 class="display-4">Estados Brasileiros</h1>
+        <p class="lead">Simples aplicação para obter informações básicas de estados brasileiros</p>
+    </header>
+
+    <form action="#" class="col-lg-10 mt-3 d-block">
+        <div class="form-group row">
+            <label for="estado" class="col-8 col-sm-2 m-auto btn btn-success">Digite o estado: </label>
+            <input id="estado" type="text" class="form-control col-11 col-sm-9" name="formulario"
+                placeholder="Digite o nome do Estado...">
+            <button id="enviar" type="submit" class="btn btn-primary m-auto">Enviar</button>
+        </div>
+        <div class="resp mt-5">
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Sigla</th>
+                        <th scope="col">Nome por extenso</th>
+                        <th scope="col">Capital</th>
+                        <th scope="col">Região</th>
+                    </tr>
+                </thead>
+                <tbody class="table-bordered ">
+                    <tr id="dados-estado">
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+    <script src="./dist/main.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+</body>
+
+</html>

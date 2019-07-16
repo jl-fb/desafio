@@ -1,0 +1,15 @@
+body{
+    background: linear-gradient(to right, rgb(201, 201, 238), rgb(160, 160, 230), rgb(137, 137, 230), rgb(117, 117, 231) );
+
+}
+header{
+    text-align: center;
+    margin: auto;
+    background: linear-gradient(to right, rgba(201, 201, 238, 0.6), rgba(160, 160, 230, 0.6), rgba(137, 137, 230, 0.6), rgba(117, 117, 231, 0.6) );
+}
+form{
+    margin: auto;
+}
+.resp{
+    display: block;
+}

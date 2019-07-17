@@ -1,25 +1,27 @@
-//const estados = require('../dados/estados.js')
-import estados from '../dados/estados'
+import estados from '../dados/estados' //simulando dados que viriam de um banco de dados
 import $ from 'jquery'
-import { format } from 'path';
 
+//API utilizada para estabelecer índice de igualdade entre strings
+//Achei mais interessante de utilizar no lugar de Regex e .replace() nesse caso
+import comparaString from 'string-similarity'
+
+// mapeando apenas o nome (transformando em maísculos) dos Estados
 const nomes = estados.map(p => {
     const nome = p.nome.toUpperCase()
     return nome
 })
-console.log(nomes)
+
+// Capturando o evento submit do formulário do index
+$('#form').submit((e) => {
+    e.preventDefault();
+    const nome = $('input').val().toUpperCase()
 
 
-
-const test = "São Paulo"
-
-function getEstados(nome) {
+    // Realizando verificação para resgatar os dados do Estado digitado 
     for (let i = 0; i < estados.length; i++) {
-        if (!nome) {
-            return
-        } else if (nome !== nomes[i]) {
-            console.log('err')
-        } else {
+        // armazenando índice de igualdade em uma variável
+        const nomesComparados = comparaString.compareTwoStrings(nome, nomes[i])
+        if (nomesComparados >= 0.5) {
             let estado = estados[i]
 
             const tdSigla = $('<td>').html(`${estado.sigla}`)
@@ -29,8 +31,8 @@ function getEstados(nome) {
 
             $('#dados-estado').append(tdSigla).append(tdNome)
                 .append(tdCapital).append(tdRegiao)
+            return
+        } else {
         }
     }
-
-}
-
+})

@@ -13,7 +13,7 @@ const nomes = estados.map(p => {
 
 // Capturando o evento submit do formulário do index
 $('#form').submit((e) => {
-    e.preventDefault();
+    e.preventDefault(); //Evitando o carregamento automático da página após o click
     const nome = $('input').val().toUpperCase()
 
 
@@ -33,6 +33,7 @@ $('#form').submit((e) => {
                 .append(tdCapital).append(tdRegiao)
             return
         } else {
+            console.log('erro')
         }
     }
 })

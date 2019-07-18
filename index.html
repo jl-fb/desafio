@@ -18,8 +18,8 @@
 
     <form id="form" action="#" class="col-lg-10 mt-3 d-block">
         <div class="form-group row">
-            <label for="estado" class="col-8 col-sm-2 m-auto btn btn-success">Digite o estado: </label>
-            <input id="estado" type="text" class="form-control col-11 col-sm-9" name="formulario"
+            <label for="estado" class="col-12 col-sm-2 m-auto btn btn-success">Digite o estado: </label>
+            <input id="estado" type="text" class="form-control col-12 col-sm-9" name="formulario"
                 placeholder="Digite o nome do Estado...">
             <button id="enviar" type="submit" class="btn btn-primary m-auto">Enviar</button>
         </div>
@@ -27,18 +27,17 @@
             <table class="table">
                 <thead class="thead-light">
                     <tr>
-                        <th scope="col">Sigla</th>
-                        <th scope="col">Nome por extenso</th>
-                        <th scope="col">Capital</th>
-                        <th scope="col">Região</th>
+                        <th scope="col-12">Sigla</th>
+                        <th scope="col-12">Nome por extenso</th>
+                        <th scope="col-12">Capital</th>
+                        <th scope="col-12">Região</th>
                     </tr>
                 </thead>
                 <tbody class="table-bordered table-dark">
-                    <tr id="dados-estado">
-
-                    </tr>
+                    <tr id="dados-estado"></tr>
                 </tbody>
             </table>
+            <div id="erro" class="alert alert-danger d-none"></div>
         </div>
     </form>
     <script src="./dist/main.js"></script>

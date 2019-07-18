@@ -16,11 +16,15 @@ $('#form').submit((e) => {
     e.preventDefault(); //Evitando o carregamento automático da página após o click
     const nome = $('input').val().toUpperCase()
 
+    function maior(valor) {
+        return valor >= 0.5
+    }
 
     // Realizando verificação para resgatar os dados do Estado digitado 
-    for (let i = 0; i < estados.length; i++) {
+    for (let i in nomes) {
         // armazenando índice de igualdade em uma variável
-        const nomesComparados = comparaString.compareTwoStrings(nome, nomes[i])
+        let nomesComparados = comparaString.compareTwoStrings(nome, nomes[i])
+
         if (nomesComparados >= 0.5) {
             let estado = estados[i]
 
@@ -29,11 +33,14 @@ $('#form').submit((e) => {
             const tdCapital = $('<td>').html(`${estado.capital}`)
             const tdRegiao = $('<td>').html(`${estado.regiao}`)
 
+            $('#dados-estado').empty()
+
             $('#dados-estado').append(tdSigla).append(tdNome)
                 .append(tdCapital).append(tdRegiao)
-            return
         } else {
-            console.log('erro')
+            const erro = $('<td>').html(`Estado não escontrado. Estado digitado ${nome}`)
+            $('#erro').empty()
+            $('#erro').append(erro).addClass('d-block')
         }
     }
 })

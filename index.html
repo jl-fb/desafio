@@ -3,12 +3,10 @@
 
 <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/index.css">
-<script src="./dist/main.js"></script>
 
-<head>
-    <meta charset=" UTF-8">
+<meta charset="utf-8">
 
-    <title>Document</title>
+<title>Document</title>
 
 <body>
     <header class="jumbotron col-12 col-sm-10 mt-3">
@@ -27,17 +25,22 @@
             <table class="table">
                 <thead class="thead-light">
                     <tr>
-                        <th scope="col-12">Sigla</th>
-                        <th scope="col-12">Nome por extenso</th>
-                        <th scope="col-12">Capital</th>
-                        <th scope="col-12">Região</th>
+                        <th>Sigla</th>
+                        <th>Nome por extenso</th>
+                        <th>Capital</th>
+                        <th>Região</th>
                     </tr>
                 </thead>
                 <tbody class="table-bordered table-dark">
-                    <tr id="dados-estado"></tr>
+                    <tr id="dados-estado">
+                    </tr>
                 </tbody>
             </table>
-            <div id="erro" class="alert alert-danger d-none"></div>
+            <div id="erro" class="alert alert-danger d-block">
+                <div class="erro">
+
+                </div>
+            </div>
         </div>
     </form>
     <script src="./dist/main.js"></script>

@@ -29,12 +29,11 @@ const retornarEstado = function () {
                 estado = estados[i]
             }
         }
-        console.log(estado)
         if (estado.nome === undefined) {
             const erro = $('<td>').html(`Estado não escontrado. Estado digitado ${nome}`)
-            $('#erro').empty()
+            $('.erro').empty()
             $('#dados-estado').empty()
-            $('#erro').append(erro).addClass('d-block')
+            $('.erro').append(erro).addClass('d-block')
 
         } else {
             const tdSigla = $('<td>').html(`${estado.sigla}`)
@@ -43,8 +42,8 @@ const retornarEstado = function () {
             const tdRegiao = $('<td>').html(`${estado.regiao}`)
 
             $('#dados-estado').empty()
-            $('#erro').addClass('d-none')
-            $('#erro').empty()
+            $('.erro').addClass('d-none')
+            $('.erro').empty()
             $('#dados-estado').append(tdSigla).append(tdNome)
                 .append(tdCapital).append(tdRegiao)
 

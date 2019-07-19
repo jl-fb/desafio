@@ -23,12 +23,13 @@ const retornarEstado = function () {
         let estado = {}
 
         for (let i in nomes) {
-            // armazenando índice de igualdade em uma variável
+            // Armazenando índice de igualdade entre estado digitado e os cadastrados no sistema
             nomesComparados = comparaString.compareTwoStrings(nome, nomes[i])
             if (nomesComparados >= 0.5) {
                 estado = estados[i]
             }
         }
+        // Verificando condição para mostrar o estado ou o erro na DOM 
         if (estado.nome === undefined) {
             const erro = $('<td>').html(`Estado não escontrado. Estado digitado ${nome}`)
             $('.erro').empty()

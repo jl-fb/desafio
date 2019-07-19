@@ -1,2 +1,4 @@
 # desafio
-Desafio aplicação frontend com JavaScript, Bootstrap, Jquery, HTML5 e CSS3
+Aplicação frontend para trazer informações dos estados brasileiros.
+Tecnologias utilizadas: JavaScript, Bootstrap, jQuery, HTML5 e CSS3, Webpack
+
